@@ -1,0 +1,127 @@
+@import '~leaflet/dist/leaflet.css';
+
+.container {
+  width: 100%;
+  min-height: 500px;
+  margin: auto;
+  cursor: default;
+  background: #F4E9D3;
+  border: solid;
+  border-color: #E6D7B9;
+  border-radius: 30px;
+}
+
+.labelYearContainer {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 8vh;
+  min-height: 10px;
+}
+
+.yearInputContainer {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  height: 8vh;
+  min-height: 10px;
+}
+
+.zoomButtonContainer {
+  position: absolute;
+  display: flex;
+  gap: 5px;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+.zoomButton {
+  background: #ede5d4;
+  border-radius: 5px;
+  border-color: #E6D7B9;
+  border: solid thin;
+}
+
+.yearInput {
+  padding: 5px 10px;
+  border: solid thin;
+  border-radius: 5px;
+}
+
+.displayYear {
+  background: #f7eddb;
+  padding: 5px 10px;
+  border: solid thin;
+  border-radius: 5px;
+}
+
+.hoverMe {
+  display: flex;
+  justify-content: center;
+}
+
+.mapInfoDisplayContainer {
+  display: flex;
+  height: 100%;
+
+  flex-direction: column;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.mapContainer {
+  position: relative;
+  height: 500px;
+  min-width: 50%;
+  display: flex;
+  align-items: center;
+  min-height: 500px;
+}
+
+.mapStyle {
+  height: 90%;
+  position: relative;
+  width: 80%;
+
+  margin: 0 auto;
+  border-radius: 30px;
+  border: solid;
+  border-color: #E6D7B9;
+
+}
+
+.infoDisplayContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+
+.infoDisplay {
+  width: 80%;
+  background: #f7eddb;
+  border: solid;
+  border-color: #E6D7B9;
+  border-radius: 30px;
+  overflow: hidden;
+  height: 90%;
+  scrollbar-color: rgb(237, 217, 217) rgba(209, 197, 197, 0.922);
+  scrollbar-width: 1px;
+}
+
+.info {
+  padding: 20px;
+  overflow-y: auto;
+  height: 90%;
+}

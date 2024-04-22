@@ -1,0 +1,36 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "allowJs": true,
+    "jsx": "react",
+    "outDir": "./dist",
+    "strict": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "noEmit": false,
+    "baseUrl": "./",
+    "preserveConstEnums": true,
+    "paths": {
+      "*": [
+        "src/*"
+      ]
+    },
+    "types": [
+      "jest",
+      "@types/jest",
+      "node"
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "build"
+  ],
+  "include": [
+    "src/**/*",
+    "node_modules/react-leaflet",
+    "node_modules/leaflet",
+    "types/*",
+  ]
+}
