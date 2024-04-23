@@ -98,8 +98,7 @@
 //         Tooltip
 //     };
 // });
-// // // you are trying to se the real react-leaflet and leaflet, its seems to be working
-// // // but you are getting removepath and leaflet id errors. REMEMBER, try the solution chatGPT gave you at the ened of the day
+
 // // import L from 'leaflet'; // This should map to the custom Leaflet implementation in `node_modules/leaflet/src/Leaflet.js`
 // // import { MapContainer } from 'react-leaflet'; // This should map to the custom React-Leaflet implementation in `node_modules/react-leaflet/lib/index.js`
 
