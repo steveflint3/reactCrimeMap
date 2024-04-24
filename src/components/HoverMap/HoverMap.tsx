@@ -93,8 +93,11 @@ const HoverMap = (): React.JSX.Element => {
   }, [stateAb])
 
   const formattedData = (): React.JSX.Element | React.JSX.Element[] => {
+    if (!name) {
+      return <div className={styles.info}>Select a State</div>
+    }
     if (noData || !crime || !Array.isArray(crime.data) || crime.data.length === 0 && !loading) {
-      return <div className={styles.info}>No Data for {name}</div>;
+      return <div className={styles.info}>No Data from {name} for the year selected. Enter another year.</div>;
     }
     return <div className={styles.info}><h1>{name}</h1>{Object.entries(crime.data[0])
       .map(([k, v]) => `${k}:${v} `)
@@ -180,13 +183,13 @@ const HoverMap = (): React.JSX.Element => {
 
   return (
     <div className={styles.container}>
-      <h1 className={styles.hoverMe}>Click to View Crime By State</h1>
+      <h1 className={styles.hoverMe}>Click Map to View Crime By State</h1>
       <div className={styles.labelYearContainer}>
-        <label>Year:</label>
+        <h5>Year:</h5>
         <h4 data-testid='displayYear' className={styles.displayYear}>{displayYear}</h4>
       </div>
       <div className={styles.yearInputContainer}>
-        <h5>Year Below</h5>
+        <h5 className={styles.enterYearLabel}>Enter Year:</h5>
         <input
           min='1900'
           max='2016'
@@ -197,10 +200,10 @@ const HoverMap = (): React.JSX.Element => {
           name='yearInput'
           defaultValue={displayYear ?? ''}
           disabled={name ? false : true}
-          title={name ? '' : 'Select A State to View By Year'}
           className={styles.yearInput}
         />
       </div>
+      {!name && <div className={styles.yearWarning}>* Click State to Enter Year</div>}
 
       <div className={styles.mapInfoDisplayContainer}>
         <div className={styles.mapContainer}>
